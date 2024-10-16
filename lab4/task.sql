@@ -13,7 +13,7 @@ create table Boxes(
     code char(4),
     contents varchar(255),
     value real,
-    warehouse integer references Warehouses(code);
+    warehouse integer references Warehouses(code)
 );
 
 
@@ -72,6 +72,9 @@ where warehouse in (
     WHERE location = 'New York'
 )
 RETURNING *;
+
+
+
 
 
 

@@ -51,10 +51,10 @@ select name from departments order by budget desc limit 1 offset 1;
 
 
 -- task 13:
-select e.name, e.lastname
-from employees e
-join departments d on e.department= d.code
-where d.budget = ( select min(budget) from departments);
+select name, lastname from employees
+where department in (
+select code from departments
+where budget = (select min(budget) from departments));                            )
 
 
 -- task 14:
@@ -85,3 +85,29 @@ delete from employees where department=14;
 
 -- task 19:
 delete from employees;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select e.name, e.lastname
+from employees e
+join departments d on e.department=d.code
+where budget = (select min(budget) from departments)
