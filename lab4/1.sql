@@ -1,0 +1,1 @@
+select salesman_id ,  avg(purch_amt) from  orders group by salesman_id
