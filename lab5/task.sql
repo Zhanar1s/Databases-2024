@@ -85,11 +85,19 @@ select * from orders where customer_id in (select customer_id from customers whe
 -- task 9:
 select * from customers where customer_id in (select customer_id from orders where purch_amt > 10);
 
+
 -- task 10:
 select sum(grade) from customers as total_grade;
+
+
 -- task 11:
-select cust_name
-from customers where cust_name is not null;
+select * from customers where cust_name is not null;
+
+
 -- task 12:
 select max(grade) from customers as maximum_grade;
+
+
+
+
 
