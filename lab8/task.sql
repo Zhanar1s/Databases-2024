@@ -19,6 +19,7 @@ create table customers(
     salesman_id int references salesman(salesman_id)
 );
 
+
 create table orders(
     ord_no int primary key,
     purch_amt decimal(10, 2),
